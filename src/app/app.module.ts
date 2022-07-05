@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,7 +11,12 @@ const STANDALONE_COMPONENTS = [HomeComponent, NavigationComponent];
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, ...STANDALONE_COMPONENTS],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ...STANDALONE_COMPONENTS,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
