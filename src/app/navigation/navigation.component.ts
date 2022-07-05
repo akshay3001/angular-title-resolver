@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,6 +12,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { AppRoutingModule } from '../app-routing.module';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     CommonModule,
     LayoutModule,
